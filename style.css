@@ -1,0 +1,107 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    width: 80%;
+    height: 80%;
+    background-color: royalblue;
+    display: flex;
+    overflow: hidden;
+}
+
+div{
+    width: 33.333%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img{
+    width: 100%;
+    transition: all .5s;
+}
+
+.arrow{
+    display: flex;
+    flex-direction: column;
+    color: red;
+    letter-spacing: 2px;
+    font-family: monospace;
+    font-size: 5rem;
+    transition: all 1s;
+    transform: scale(0);
+}
+
+.container:hover .arrow{
+    transform: scale(1);
+    width: 100%;
+    height: 1%;
+}
+
+.man{
+    transform: translateX(80%);
+}
+
+.container:hover .man{
+    transform: translateX(0);
+}
+
+.woman{
+    transform: translateX(-80%);
+}
+
+.container:hover .woman{
+    transform: translateX(0);
+}
+
+h1{
+    transition: all 1s;
+    transform: translateY(0);
+}
+
+.container:hover h1{
+    transform: translateY(50%);
+}
+
+@media screen and (max-width: 1024px) {
+    .container:hover h1{
+        transform: translateY(40%);
+    }
+
+    h1{
+        font-size: 3rem;
+    }
+
+    .container:hover .arrow{
+        transform: scale(1);
+        width: 80%;
+        height: .2%;
+    }
+
+    .container:hover .man{
+        transform: translateX(20%);
+    }
+
+    .container:hover .woman{
+        transform: translateX(-20%);
+    }
+
+    .container{
+        height: 50vh;
+        border-radius: 0;
+    }
+
+}
